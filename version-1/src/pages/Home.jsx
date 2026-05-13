@@ -7,6 +7,8 @@ export default function Home({ allCountries }) {
     region: ""
   }); 
   
+  if (!allCountries) return <h2>Loading.... </h2>
+
   const filteredCountries = allCountries.filter(country => {
     // match text search
     const matchSearch = filters.search === "" || new RegExp(filters.search, "i").test(country.name.common);
