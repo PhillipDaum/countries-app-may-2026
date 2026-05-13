@@ -1,4 +1,7 @@
-export default function SavedCountries() {
+export default function SavedCountries({ allCountries }) {
+  
+  console.log("from Saved Countries", allCountries)
+
   return (
     <>
       <h2>My Saved Countries</h2>

@@ -51,7 +51,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home allCountries={allCountries} />} />
           <Route path="/country-detail" element={<CountryDetail />} />
-          <Route path="/saved-countries" element={<SavedCountries />} />
+          <Route path="/saved-countries" element={<SavedCountries allCountries={allCountries} />} />
         </Routes>
       </main>
     </div>
