@@ -1,4 +1,4 @@
-# 🌍 Countries App
+# 🌍 Super Countries App
 
 Throughout the Backend course, you will build a full-stack web application that displays information about countries around the world.
 
