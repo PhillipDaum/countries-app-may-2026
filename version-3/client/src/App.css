@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+:root {
+  /* font */
+  --main-font: "Nunito Sans", arial;
+
+  /* light color scheme */
+  --white: #fff;
+  --light: #f0f0f0;
+  --light-shadow: #bbbb;
+
+  /* dark color scheme */
+  --dark-bg: #1a1a1a;
+  --dark-element: #2b2b2b;
+  --dark-shadow: #000000;
+}
+
+/* Utility Classes */
+/* This is for screen readers to read labels on forms and such */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+body {
+  font-family: var(--main-font);
+  margin: 0;
+  padding: 0;
+  background-color: var(--light);
+}
+
+/* header and nav styles */
+.nav-header {
+  padding: 1rem 2rem;
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px var(--light-shadow);
+}
+.nav-header nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-header nav ul a {
+  text-decoration: none;
+  color: black;
+}
+.nav-home {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+/* Main */
+main {
+  padding: 1rem;
+}
+
+/* HOME PAGE */
+.filter-bar fieldset {
+  border: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 0 1rem;
+}
+.countries-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* COUNTRY CARD COMPONENT */
+.country-card {
+  background-color: var(--white);
+  border-radius: 0.3rem;
+  box-shadow: 3px 3px 3px var(--light-shadow);
+  overflow: hidden; /* gets border radius from card on image tops */
+}
+.country-card img {
+  width: 100%;
+}
+.country-card-contents {
+  padding-left: 0.5rem;
+}
+
+/* SAVED COUNTRIES PAGE */
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: none;
+  max-width: 40rem;
+  padding: 1rem 0;
+}
+form legend {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+input,
+textarea {
+  padding: 1rem;
+  border: 2px solid var(--light-shadow);
+  border-radius: 5px;
+  box-shadow: 0 0 3px 1px var(--light-shadow);
+  resize: none;
+}
+button {
+  cursor: pointer;
+  padding: .5rem;
+  background-color: var(--white);
+  border: 2px solid var(--light-shadow);
+  border-radius: 5px;
+  box-shadow: 0 0 3px 1px var(--light-shadow);
+}
+button:hover {
+  background-color: var(--dark-element);
+  color: var(--white);
+}
+
+/* media queries - HOME PAGE */
+@media (min-width: 650px) {
+  .countries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .countries-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
