@@ -5,8 +5,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        // https://backend-answer-keys.onrender.com
-        target: "http://localhost:3000",
+        target: "https://countries-app-may-2026.onrender.com/",
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, ""),
