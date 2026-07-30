@@ -9,6 +9,9 @@ export default function CountryDetail({ allCountries, savedCountries }) {
     ? allCountries.find((country) => country.name.common === countryName)
     : null;
 
+  
+  console.log("up", userparams())
+  
   const updateCountryCount = async () => {
     const response = await fetch("/api/update-one-country-count", {
       method: "POST",

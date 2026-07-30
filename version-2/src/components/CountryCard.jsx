@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom'
 import '../App.css'
 
 export default function CountryCard({ country }) {
-    
-console.log("from country card", country);
 
   return (
     <Link to={`/country-detail/${country.name.common}`}>
